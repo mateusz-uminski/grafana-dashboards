@@ -1,0 +1,16 @@
+name: verify
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  docker-build:
+    needs: tests
+    uses: mateusz-uminski/github-actions/.github/workflows/build-docker-image.yaml@main
+    with:
+      runner: ubuntu-22.04
+      path: "."
+      tag: latest

@@ -1,0 +1,9 @@
+# git directories
+.git/
+.github/
+
+# jsonnet libraries
+vendor/
+
+# generated files
+out/
